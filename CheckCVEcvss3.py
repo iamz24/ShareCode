@@ -21,15 +21,22 @@ def get_base_score(cve_id):
         response.raise_for_status()
         soup = BeautifulSoup(response.text, "html.parser")
 
-        # Tìm thẻ <a> chứa điểm số CVE
-        score_tag = soup.find("a", {"data-testid": "vuln-cvss3-cna-panel-score"})
-        if score_tag:
+        # Lấy tất cả các thẻ với các data-testid khác nhau
+        score_tags = soup.find_all("a", {"data-testid": re.compile(r"vuln-cvss3[-a-zA-Z0-9]*-panel-score")})
+        scores = []
+
+        for score_tag in score_tags:
             score_text = score_tag.text.strip()  # Ví dụ: "9.8 CRITICAL" hoặc "N/A"
             try:
                 score_value = float(score_text.split()[0])  # Lấy số đầu tiên
-                return score_value
+                scores.append(score_value)
             except ValueError:
-                return None  # Nếu không phải số (ví dụ "N/A"), trả về None
+                continue  # Nếu không phải số, bỏ qua
+
+        # Trả về điểm số lớn nhất (nếu có điểm >= 9.0)
+        if scores:
+            max_score = max(scores)
+            return max_score if max_score >= 9.0 else None
     except Exception as e:
         print(f"Lỗi lấy dữ liệu {cve_id}: {e}")
     return None
@@ -38,7 +45,7 @@ def get_base_score(cve_id):
 def filter_high_risk_cves(cve_list):
     for cve in cve_list:
         score = get_base_score(cve)
-        if score is not None and score >= 9.0:
+        if score is not None:
             print(f"{cve}: {score} (CRITICAL)")
 
 # Main
