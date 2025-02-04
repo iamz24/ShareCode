@@ -1,0 +1,17 @@
+{
+    "sid": "rt_scheduler__admin__search__RMD5c9d8659451dff434_at_1735465719_1.1",
+    "search_name": "Alert File Created",
+    "app": "search",
+    "owner": "admin",
+    "results_link": "http://WIN-UQ2PGBKJ550:8000/app/search/search?q=%7Cloadjob%20rt_scheduler__admin__search__RMD5c9d8659451dff434_at_1735465719_1.1%20%7C%20head%201%20%7C%20tail%201&earliest=0&latest=now",
+    "result": {
+        "time": "2024-12-29 16:49:01",
+        "full_log": "File 'c:\\users\\administrator\\downloads\\daylafiletest.txt' added\nMode: realtime\n",
+        "user": "Administrators",
+        "ip": "10.10.20.11",
+        "name": "VictimPC",
+        "path": "c:\\users\\administrator\\downloads\\daylafiletest.txt",
+        "hash": "2d75cc1bf8e57872781f9cd04a529256",
+        "count": "64"
+    }
+}
