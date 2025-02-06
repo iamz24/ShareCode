@@ -23,7 +23,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # Thay token bằng token do BotFather cung cấp
-token = '7792316991:AAERTsQre4IJeXizwFOg43Z2fQdXcDTustA'
+token = 'token'
 
 # ------------------ HÀM XỬ LÝ CVE (get_base_score) ------------------ #
 def get_base_score(cve_id):
