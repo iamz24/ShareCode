@@ -68,8 +68,8 @@ public class FileCheckService {
     }
 
     public static void sendMessage(String message) throws Exception {
-        String botToken = "7344529813:AAF03-IYaC1nnwwbnOFUx1BY94DiABrygbw";
-        String chatID = "-4526958985";
+        String botToken = "Bot_Token";
+        String chatID = "Chat_ID";
         String teleApiUrl = "https://api.telegram.org/bot" + botToken + "/sendMessage";
     
         RestTemplate restTemplate = new RestTemplate();
