@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: alert.checkfile.malicious.cdkn.CdknApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.860 s -- in alert.checkfile.malicious.cdkn.CdknApplicationTests

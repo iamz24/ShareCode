@@ -1,0 +1,3 @@
+alert\checkfile\malicious\cdkn\CdknApplication.class
+alert\checkfile\malicious\cdkn\service\FileCheckService.class
+alert\checkfile\malicious\cdkn\controller\FileCheckController.class
