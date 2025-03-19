@@ -18,7 +18,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Service
 public class FileCheckService {
     private static final String apiUrl = "https://www.virustotal.com/api/v3/files/";
-    private static final String apiKey = "da4b2918878e460916ff948f3fcd4a9cab86477dd600621950568d24f1c0764d";
+    private static final String apiKey = "API_KEY_VirusTotal";
     
     public void checkFileByVirusTotal(String hashFromSiem, String pathFromSiem, String userFromSiem) throws Exception {
         //Tạo rest template để gửi request
@@ -68,8 +68,8 @@ public class FileCheckService {
     }
 
     public static void sendMessage(String message) throws Exception {
-        String botToken = "7344529813:AAF03-IYaC1nnwwbnOFUx1BY94DiABrygbw";
-        String chatID = "-4526958985";
+        String botToken = "Bot_Token";
+        String chatID = "Chat_ID";
         String teleApiUrl = "https://api.telegram.org/bot" + botToken + "/sendMessage";
     
         RestTemplate restTemplate = new RestTemplate();
